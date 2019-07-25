@@ -117,7 +117,7 @@ function randomlySelectSongAndRequesterThenDelete(){
 }
 
 function clearSongRequestMadeStatuses(){
-  for (var i=0; TEAM_SHEET.getDataRange().getValues().length; i++){
+  for (var i=0; i < TEAM_SHEET.getDataRange().getValues().length; i++){
     TEAM_SHEET.getRange(i + 1, SONG_REQUEST_COLUMN).setValue("");
   }
 }
