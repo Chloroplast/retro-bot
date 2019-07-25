@@ -115,3 +115,9 @@ function randomlySelectSongAndRequesterThenDelete(){
   SONG_SHEET.deleteRow(randomSongIndex + 1);
   return [encodeForPostMessage(data[randomSongIndex][0]), encodeForPostMessage(data[randomSongIndex][1])];
 }
+
+function clearSongRequestMadeStatuses(){
+  for (var i=0; TEAM_SHEET.getDataRange().getValues().length; i++){
+    TEAM_SHEET.getRange(i + 1, SONG_REQUEST_COLUMN).setValue("");
+  }
+}
